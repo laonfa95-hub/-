@@ -1,4 +1,4 @@
-name: Build APK
+⁴name: Build APK
 
 on:
   push:
@@ -38,7 +38,7 @@ jobs:
       - name: Build APK
         run: |
           cd android-project
-          gradle :app:assembleDebug --stacktrace
+          gradle :app:assembleDebug --stacktrace -Pandroid.useAndroidX=true
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
